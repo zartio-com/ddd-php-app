@@ -1,0 +1,4 @@
+#!/bin/bash
+
+IMAGE_NAME="composer:latest"
+docker run --rm -v "$(pwd)":/app -w /app -e COMPOSER_ALLOW_SUPERUSER=1 $IMAGE_NAME composer "$@"
