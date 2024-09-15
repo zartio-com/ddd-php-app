@@ -3,19 +3,14 @@ declare(strict_types=1);
 
 namespace Context\User\Domain\ValueObject;
 
-use Symfony\Component\Uid\Uuid;
+use JetBrains\PhpStorm\Immutable;
+use SharedKernel\Domain\ValueObject\Id;
 
-readonly class UserId
+/**
+ * @internal
+ */
+#[Immutable]
+readonly class UserId extends Id
 {
-    public function __construct(
-        private Uuid $id,
-    )
-    {
 
-    }
-
-    public function getValue(): Uuid
-    {
-        return $this->id;
-    }
 }

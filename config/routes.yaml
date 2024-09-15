@@ -1,0 +1,11 @@
+app.swagger_ui:
+  path: /api/doc
+  methods: GET
+  defaults: { _controller: nelmio_api_doc.controller.swagger }
+
+user_api_admin_v1:
+  resource:
+    path: ../src/Context/User/UserInterface/RestApi/Admin/V1/Action
+    namespace: Context\User\UserInterface\RestApi\Admin\V1\Action
+  type: attribute
+  prefix: /api/admin/v1/user

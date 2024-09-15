@@ -1,0 +1,23 @@
+nelmio_api_doc:
+  areas:
+    default:
+      path_patterns: [ ^/api/admin/v1/(?!/doc$) ]
+#      host_patterns: [ ^api\. ]
+
+      documentation:
+        servers:
+          - url: http://api.example.com/unsafe
+            description: API over HTTP
+        info:
+          title: My App
+          description: This is an awesome app!
+          version: 1.0.0
+          x-build: #CommitHash
+        components:
+          securitySchemes:
+            Bearer:
+              type: http
+              scheme: bearer
+              bearerFormat: JWT
+        security:
+          - Bearer: [ ]
